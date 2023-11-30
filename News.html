@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Basic styling for the header */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the background image */
+        .background-container {
+            background-image: url('https://cdn.sportsbettingdime.com/app/uploads/media/1/FootballStadium.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(138, 17, 17, 0.8); /* Use rgba for a semi-transparent background color */
+            color: #fff;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* Logo styling */
+        #logo {
+            margin-left: 20px;
+        }
+
+        /* Navigation menu styling */
+        nav {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        /* Cart page styling on the right */
+        #cart {
+            margin-right: 20px;
+        }
+
+        /* Styling for the news section */
+        .news-section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Place above the background */
+        }
+
+        /* Styling for the footer */
+        footer {
+            background-color: rgba(138, 17, 17, 0.8); /* Use rgba for a semi-transparent background color */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* Footer links styling */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for the background image -->
+    <div class="background-container">
+
+        <!-- Header with logo, navigation, and cart -->
+        <header>
+            <div id="logo">
+                <img src="logo.png" alt="Logo" height="40">
+            </div>
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="Magazine.html">Magazine</a>
+                <a href="Teams.html">Teams</a>
+                <a href="playersprofile.html">Player Profile</a>
+                <a href="news.html">News</a>
+                <a href="sorts and schedule.html">Scores & Schedules</a>
+                <a href="sportscategories.html">Sports Categories</a>
+                <a href="videos.html">Videos</a>
+                <a href="shop.html">Shop</a>
+            </nav>
+            <div id="cart">
+                <a href="cart.html">Cart</a>
+            </div>
+        </header>
+
+        <!-- News section -->
+        <div class="news-section">
+            <h2>Sports News</h2>
+            <!-- Add sports news content here -->
+            <p>In March 2020, the International Olympic Committee (IOC) and Japan officially announced the postponement of the Tokyo 2020 Summer Olympics to 2021 due to the pandemic..</p>
+            <p>More news...</p>
+            <!-- Add more news articles as needed -->
+        </div>
+
+        <!-- Footer with page links -->
+        <footer>
+            <a href="about-us.html">About Us</a>
+            <a href="about-website.html">About Website</a>
+            <a href="contact-information.html">Contact Information</a>
+            <a href="our-team.html">Our Team</a>
+        </footer>
+
+    </div>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+</body>
+</html>
